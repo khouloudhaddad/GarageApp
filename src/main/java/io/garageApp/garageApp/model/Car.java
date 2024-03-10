@@ -5,7 +5,8 @@ public class Car {
         RED,
         BLUE,
         GREEN,
-        Yellow
+        YELLOW,
+        GREY
     }
     private String model;
     private String brand;
