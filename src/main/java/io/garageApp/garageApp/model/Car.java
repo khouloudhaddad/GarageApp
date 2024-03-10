@@ -8,6 +8,8 @@ public class Car {
         YELLOW,
         GREY
     }
+    
+    private long id;
     private String model;
     private String brand;
 
@@ -19,11 +21,24 @@ public class Car {
         return model;
     }
 
-    public Car(String model, String brand, int year, Color color) {
+    public Car() {
+    }
+
+    public Car(long id, String model, String brand, int year, Color color) {
+        super();
+        this.id = id;
         this.model = model;
         this.brand = brand;
         this.year = year;
         this.color = color;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setModel(String model) {
