@@ -1,5 +1,8 @@
 package io.garageApp.garageApp.model;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Car {
     public enum Color {
         RED,
@@ -9,10 +12,13 @@ public class Car {
         GREY
     }
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String model;
     private String brand;
 
+    @Column(name = "created_at")
     private int year;
 
     private  Color color;
